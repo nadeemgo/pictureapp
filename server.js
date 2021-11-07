@@ -159,9 +159,8 @@ app.get('/modelcheckout', (req, res) => {
 const route = require('./routes/routes.js')
 route(app)
 
-const portweb = process.env.PORT || 3300
-const serverweb = app.listen(portweb, () => {
-    console.log('web server started at 3300')
+const serverweb = app.listen(process.env.PORT || 3300, () => {
+    console.log('web server started at', process.env.PORT)
 })
 
 const io = new Server(serverweb);
