@@ -19,7 +19,11 @@ const mongoose = require('mongoose')
     // var MongoStore = require('connect-mongo')
 var MongoStore = require('connect-mongodb-session')(session)
 
-mongoose.connect('mongodb://localhost/pizzaapp')
+// mongoose.connect('mongodb://localhost/pizzaapp')
+//     .then(() => { console.log('database connected') })
+//     .catch(() => { console.log('database not connected') })
+
+mongoose.connect(process.env.MANGO_URL)
     .then(() => { console.log('database connected') })
     .catch(() => { console.log('database not connected') })
 
