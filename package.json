@@ -29,6 +29,9 @@
         "socket.io": "^4.2.0",
         "stripe": "^8.181.0"
     },
+    "engines": {
+        "node": "14.15.0"
+    },
     "devDependencies": {
         "laravel-mix": "^6.0.34",
         "resolve-url-loader": "^4.0.0",
