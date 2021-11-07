@@ -32,7 +32,8 @@ var db = mongoose.connection
 // var sessionstore = new mongostore(session)
 const sessionstore = new MongoStore({
     // uri: 'mongoose.connection',
-    uri: 'mongodb://localhost/pizzaapp',
+    // uri: 'mongodb://localhost/pizzaapp',
+    uri: process.env.MANGO_URL,
     collection: 'sessions',
 })
 sessionstore.on('error', (error) => { console.log('store error: ', error) })
