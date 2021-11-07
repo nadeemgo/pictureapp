@@ -4,13 +4,15 @@ function homecontroller() {
     return {
         home: async(req, res) => {
             // console.log('req.session', req.session)
-            try {
-                const resp = await Product.find()
-                    // console.log('resp:', resp)
-                res.render('pages/home', { data: resp })
-            } catch (error) {
-                console.log('error:', error)
-            }
+            // try {
+            //     const resp = await Product.find()
+            //         // console.log('resp:', resp)
+            //     res.render('pages/home', { data: resp })
+            // } catch (error) {
+            //     console.log('error:', error)
+            // }
+            res.render('pages/home', { data: '' })
+
 
         },
         update: (req, res) => {
