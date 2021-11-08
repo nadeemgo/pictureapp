@@ -164,7 +164,7 @@ app.get('/modelcheckout', (req, res) => {
 const route = require('./routes/routes.js')
 route(app)
 
-const serverweb = app.listen(process.env.PORT || 3300, () => {
+const serverweb = app.listen(process.env.PORT, () => {
     console.log('web server started at', process.env.PORT)
 })
 
